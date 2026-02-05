@@ -72,6 +72,7 @@ letter-spacing: 0%;
 vertical-align: middle;
 height: 130px;
 text-overflow: ellipsis;
+color: rgba(71, 85, 105, 1);
 /* white-space: nowrap; */
 /* overflow: hidden; */
 }
@@ -236,6 +237,7 @@ font-weight: 700;
 font-style: Bold;
 font-size: 20px;
 line-height: 28px;
+color: rgba(13, 47, 95, 1);
 }
 .listcon{
     display: flex;
