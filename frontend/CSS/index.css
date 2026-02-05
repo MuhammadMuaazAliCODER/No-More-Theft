@@ -568,13 +568,13 @@ color: rgba(203, 213, 225, 1);
 button:hover{
     opacity: 0.9;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     /* Container & main layout */
     .main{
         height: fit-content;
         padding-left: 40px;
         padding-right: 40px;
-        margin-top: 60px;
+        /* margin-top: 60px; */
     }
     .mainContainer{
         flex-direction: column;
@@ -586,7 +586,9 @@ button:hover{
         width: 100%;
         padding: 0;
     }
-
+  .left-con , .right-con{
+    width: 100%;
+}
     /* Make paragraphs flexible */
     .para{
         height: auto;
@@ -671,14 +673,14 @@ button:hover{
 }
 
 @media (max-width: 992px) {
-    .main{ padding-left: 32px; padding-right: 32px; margin-top: 50px; }
+    .main{ padding-left: 32px; padding-right: 32px;  }
     .mainContainer{ padding-top: 40px; gap: 32px; }
     .heading h2, .conh, .cont-head, .blog-head{ font-size: 28px; line-height: 36px; }
     .pri-head h3{ font-size: 22px; }
 }
 
 @media (max-width: 768px) {
-    .main{ padding-left: 20px; padding-right: 20px; margin-top: 40px; }
+    .main{ padding-left: 20px; padding-right: 20px; }
     .mainContainer{ padding-top: 30px; gap: 24px; }
     #howItWork,#whyNotTheft,#pricing,#contactus,#blog{ padding-left: 20px; padding-right: 20px; }
     .heading h2, .conh, .cont-head, .blog-head{ font-size: 24px; line-height: 32px; }
@@ -687,7 +689,7 @@ button:hover{
 }
 
 @media (max-width: 576px) {
-    .main{ padding-left: 16px; padding-right: 16px; margin-top: 30px; }
+    .main{ padding-left: 16px; padding-right: 16px;  }
     .mainContainer{ padding-top: 20px; gap: 20px; }
     .heading h2, .conh, .cont-head, .blog-head{ font-size: 20px; line-height: 28px; }
     .para, .blog-para, .cont-para{ font-size: 14px; }

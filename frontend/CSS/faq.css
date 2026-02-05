@@ -161,7 +161,7 @@
 .faq-item:nth-child(7) { animation-delay: 0.7s; opacity: 0; }
 .faq-item:nth-child(8) { animation-delay: 0.8s; opacity: 0; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     /* Make container fluid and reduce padding for medium screens */
     .faq-container {
         width: calc(100% - 60px);
@@ -239,5 +239,5 @@
     .faq-item { padding: 14px; border-radius: 10px; }
     .faq-icon { width: 28px; height: 28px; font-size: 16px; }
     .faq-question { font-size: 14px; }
-    .faq-answer { font-size: 13px; line-height: 18px; max-height: 180px; }
+    .faq-answer { font-size: 13px; line-height: 18px;  }
 }
