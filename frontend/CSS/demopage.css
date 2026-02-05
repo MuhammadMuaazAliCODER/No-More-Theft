@@ -54,7 +54,7 @@ line-height: 24px;
 letter-spacing: 0%;
 text-align: center;
 vertical-align: middle;
-
+color: rgba(71, 85, 105, 1);
         }
 
         .demo-form {
@@ -62,6 +62,7 @@ vertical-align: middle;
             flex-direction: column;
             width: 100%;
             gap: 20px;
+            align-items: center;
         }
 
         .form-row {
@@ -130,17 +131,27 @@ vertical-align: middle;
         }
          
         .submit-button {
-            width: 100%;
-            padding: 14px;
-            background: #0f2e4d;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           width: 466px;
+height: 50px;
+opacity: 1;
+padding-top: 17px;
+padding-right: 24px;
+padding-bottom: 17px;
+padding-left: 24px;
+border-radius: 12px;
+background: rgba(13, 47, 95, 1);
+font-family: 'Plus Jakarta Sans';
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: rgba(255, 255, 255, 1);
         }
 
         .submit-button:hover {
