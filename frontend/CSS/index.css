@@ -1,0 +1,701 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+/* Prevent accidental horizontal scroll and make media responsive */
+html, body {
+    overflow-x: hidden;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+.main{
+    margin-top: 80px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: clamp(16px, 6vw, 120px);
+    padding-right: clamp(16px, 6vw, 120px);
+    width: 100%;
+   height: fit-content;
+}
+
+.mainContainer{
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+   padding-top: 100px;
+    gap: 50px;
+}
+.mainLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 50%; 
+}
+.mainRight{
+    width: 50%;
+    padding: 0%;
+}
+.mainRight svg{
+    width: 100%;
+    height: auto;
+}
+.largeText{
+    font-family: 'Plus Jakarta Sans';
+font-weight: 800;
+
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: clamp(56px, 6.5vw, 100px);
+letter-spacing: -1.8px;
+vertical-align: middle;
+}
+.para{
+    font-family: 'Plus Jakarta Sans';
+font-weight: 400;
+  font-size: clamp(16px, 1.25vw, 20px);
+    line-height: clamp(22px, 1.8vw, 28px);
+letter-spacing: 0%;
+vertical-align: middle;
+height: 130px;
+text-overflow: ellipsis;
+/* white-space: nowrap; */
+/* overflow: hidden; */
+}
+.mainbtn button{
+  width: 204px;
+  height: 50px;
+  opacity: 1;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(13, 47, 95, 1);
+  font-weight: 700;
+  font-size: 18px !important;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+.mainbtn button:hover{
+    opacity: 0.9;
+}
+#howItWork{
+    width: 100%;
+    background-color:rgba(248, 250, 252, 1);
+border-width: 0.8px, 0px, 0.8px, 0px;
+border-style: solid;
+border-color: rgba(241, 245, 249, 1);
+height: fit-content;
+padding-left: clamp(24px, 8vw, 352px);
+padding-right: clamp(24px, 8vw, 352px);
+font-family: 'Plus Jakarta Sans';
+padding-top: 72px;
+padding-bottom: 72px;
+display: flex;
+justify-content: center;
+}
+.howItWork-Container{
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+    
+}
+
+.heading{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.heading h2{
+font-weight: 700;
+font-style: Bold;
+font-size: 36px;
+line-height: 40px;
+letter-spacing: 0%;
+color: rgba(13, 47, 95, 1);
+}
+.heading p {
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+letter-spacing: 0%;
+}
+.howItWork-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.list ul {
+    list-style: none;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* width: 100%; */
+}
+
+.listcon{
+    display:flex;
+}
+.mainList{
+    display: flex;
+}
+.mainList {
+    position: relative;
+    padding-left: 40px;
+}
+
+.mainList:first-child::before{
+     content: "";
+    position: absolute;
+    left: 10px;
+    top: 12px;     
+    bottom: 30px;    
+    width: 2px;
+    background: #ccc;
+}
+.pro:first-child::before{
+     content: "";
+    position: absolute;
+    left: 10px;
+    top: 12px;     
+    bottom: 30px;    
+    width: 2px;
+    background: #00A8E8;
+}
+.mainList::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #ccc;
+}
+.pro::before{
+background-color: #00A8E8;
+}
+.is-last::before{
+    height: 55%!important;
+}
+.item, .itemPro {
+    position: relative;
+    margin-bottom: 40px;
+}
+.itemPro::before{
+     content: "";
+    position: absolute;
+    left: -36px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: rgba(0, 168, 232, 1);
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.item::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: rgba(229, 231, 235, 1);
+    border-radius: 50%;
+   
+
+}
+.listhead{
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 28px;
+}
+.listcon{
+    display: flex;
+    flex-direction: column;
+}
+
+#whyNotTheft{
+    width: 100%;
+height: fit-content;
+padding-left: clamp(24px, 8vw, 352px);
+padding-right: clamp(24px, 8vw, 352px);
+display: flex;
+justify-content: center;
+font-family: 'Plus Jakarta Sans';
+padding-top: 72px;
+padding-bottom: 72px;
+}
+.whyNotTheft-con{
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.con-head{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+.conh{
+
+font-weight: 700;
+font-style: Bold;
+font-size: 48px;
+line-height: 48px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: rgba(13, 47, 95, 1);
+}
+.conp{
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0%;
+}
+.main-con{
+    display:flex;
+    width: 100%;
+    justify-content:center;
+   
+}
+.left-con , .right-con{
+    width: 34%;
+}
+.right-con ul ,.left-con ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding:32px;
+    gap:16px;
+    
+}
+.right-con ul li, .left-con ul li {
+    display: flex;
+    gap: 12px;
+}
+.right-con{
+   border-left: rgba(0, 168, 232, 1) 1px solid;
+   margin-bottom: 90px;
+
+}
+  .right-con  {
+  background:
+    linear-gradient(90deg, #00A8E8, #FFFFFF) top / 100% 1px no-repeat,
+    linear-gradient(90deg, #00A8E8, #FFFFFF) bottom / 100% 1px no-repeat,
+    white;
+}
+.left-con {
+    margin-bottom: 90px;
+  background:
+    linear-gradient(90deg, #FFFFFF ,  #00A8E8) top / 100% 1px no-repeat,
+    linear-gradient(90deg, #FFFFFF, #00A8E8) bottom / 100% 1px no-repeat,
+    white;
+}
+#pricing{
+ width: 100%;
+    background-color:rgba(248, 250, 252, 1);
+border-width: 0.8px, 0px, 0.8px, 0px;
+border-style: solid;
+border-color: rgba(241, 245, 249, 1);
+height: fit-content;
+/* Use responsive side padding instead of huge fixed values to avoid overflow */
+padding-left: clamp(24px, 10vw, 352px);
+padding-right: clamp(24px, 10vw, 352px);
+font-family: 'Plus Jakarta Sans';
+padding-top: 72px;
+padding-bottom: 72px;
+display: flex;
+justify-content: center;
+
+}
+.pricingcon{
+      max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+.pri-head{
+    text-align: center;
+}
+.pri-head h3{
+font-weight: 700;
+font-style: Bold;
+font-size: 30px;
+line-height: 36px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: rgba(13, 47, 95, 1);
+margin-bottom: 16px;
+}
+.pri-head p {
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: rgba(71, 85, 105, 1);
+}
+.card{
+    background-color:white;
+    border-end-end-radius: 24px;
+    border-end-start-radius: 24px;
+    width: 510px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.cardline{
+    width: 100%;
+    height: 8px;
+   background: linear-gradient(90deg, #0D2F5F 0%, #00A8E8 100%);
+   border-top-left-radius: 24px;
+border-top-right-radius: 24px;
+margin-bottom: 32px;
+}
+.cardhead{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+.cardhead p {
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 28px;
+letter-spacing: 1px;
+text-align: center;
+vertical-align: middle;
+text-transform: uppercase;
+color: rgba(100, 116, 139, 1);
+
+}
+.cardlist{
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+}
+.cardlist ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.cardlist ul li {
+    display: flex;
+    gap: 12px;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}
+.cardbtn button{
+  width: 100%;
+  height: 50px;
+  opacity: 1;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(13, 47, 95, 1);
+  font-weight: 700;
+  font-size: 18px !important;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  margin-top: 32px;
+}
+#contactus{
+ width: 100%;
+    background-color:rgba(248, 250, 252, 1);
+border-width: 0.8px, 0px, 0.8px, 0px;
+border-style: solid;
+border-color: rgba(241, 245, 249, 1);
+height: fit-content;
+padding-left: clamp(24px, 8vw, 352px);
+padding-right: clamp(24px, 8vw, 352px);
+font-family: 'Plus Jakarta Sans';
+padding-top: 72px;
+padding-bottom: 72px;
+display: flex;
+justify-content: center;
+}
+
+.contactus-con{
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+     justify-content: center;
+    gap: 64px;
+    
+}
+.cont-left , .cont-right{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 40%;
+}
+.cont-left{
+    width: 60%;
+}
+.cont-head{
+font-weight: 700;
+font-size: 48px;
+line-height: 60px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: rgba(13, 47, 95, 1);
+}
+.cont-para{
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: rgba(71, 85, 105, 1);
+}
+.cont-links{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+#blog{
+    width: 100%;
+    background-color:rgba(13, 47, 95, 1);
+height: fit-content;
+/* responsive side padding */
+padding-left: clamp(24px, 8vw, 256px);
+padding-right: clamp(24px, 8vw, 256px);
+font-family: 'Plus Jakarta Sans';
+padding-top: 72px;
+padding-bottom: 72px;
+display: flex;
+justify-content: center;
+}
+.blog-con{
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+    text-align: center;
+    
+}
+.blog-head{
+font-weight: 700;
+font-size: 48px;
+line-height: 48px;
+letter-spacing: -1.2px;
+text-align: center;
+vertical-align: middle;
+color:rgba(255, 255, 255, 1);
+}
+.blog-para{
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: rgba(203, 213, 225, 1);
+
+}
+.blog-button{
+    display: flex;
+    justify-content: center;
+}
+.blog-button button{
+  width: 204px;
+  height: 50px;
+  opacity: 1;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: none;
+  border-radius: 12px;
+  background: rgba(0, 168, 232, 1);
+  font-weight: 700;
+  font-size: 18px !important;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.9;
+}
+@media (max-width: 1200px) {
+    /* Container & main layout */
+    .main{
+        height: fit-content;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 60px;
+    }
+    .mainContainer{
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 40px;
+        align-items: center;
+    }
+    .mainLeft, .mainRight{
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Make paragraphs flexible */
+    .para{
+        height: auto;
+    }
+
+    /* Stack content columns and tighten spacing */
+    .howItWork-content,
+    .main-con,
+    .contactus-con{
+        flex-direction: column;
+        padding: 0;
+        gap: 32px;
+        align-items: stretch;
+    }
+
+    /* Override large fixed paddings used on wide layouts */
+    #howItWork,
+    #whyNotTheft,
+    #pricing,
+    #contactus,
+    #blog{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* Pricing card responsiveness */
+    .card{
+        width: fit-content;
+    }
+
+    /* Headings and typography adjustments */
+    .heading h2,
+    .conh,
+    .cont-head,
+    .blog-head{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .pri-head h3{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .blog-para,
+    .cont-para,
+    .listhead{
+        font-size: 16px;
+    }
+
+    /* Timeline/list tweaks */
+    .mainList{
+        padding-left: 20px;
+    }
+    .mainList::before{
+        left: 6px;
+    }
+    .item::before,
+    .itemPro::before{
+        left: -28px;
+    }
+
+    /* Card padding and button spacing */
+    .cardlist{
+        padding: 20px;
+    }
+    .cardbtn button{
+        margin-top: 20px;
+    }
+
+    /* Ensure contact columns are full width */
+    .cont-left,
+    .cont-right{
+        width: 100%;
+    }
+
+    /* Reduce large blog section padding */
+    .blog-con{
+        gap: 24px;
+    }
+    .cont-right svg{
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .main{ padding-left: 32px; padding-right: 32px; margin-top: 50px; }
+    .mainContainer{ padding-top: 40px; gap: 32px; }
+    .heading h2, .conh, .cont-head, .blog-head{ font-size: 28px; line-height: 36px; }
+    .pri-head h3{ font-size: 22px; }
+}
+
+@media (max-width: 768px) {
+    .main{ padding-left: 20px; padding-right: 20px; margin-top: 40px; }
+    .mainContainer{ padding-top: 30px; gap: 24px; }
+    #howItWork,#whyNotTheft,#pricing,#contactus,#blog{ padding-left: 20px; padding-right: 20px; }
+    .heading h2, .conh, .cont-head, .blog-head{ font-size: 24px; line-height: 32px; }
+    .largeText{ font-size: clamp(32px, 6vw, 48px); }
+    .para{ font-size: 15px; }
+}
+
+@media (max-width: 576px) {
+    .main{ padding-left: 16px; padding-right: 16px; margin-top: 30px; }
+    .mainContainer{ padding-top: 20px; gap: 20px; }
+    .heading h2, .conh, .cont-head, .blog-head{ font-size: 20px; line-height: 28px; }
+    .para, .blog-para, .cont-para{ font-size: 14px; }
+    .card{ max-width: 100%; padding: 16px; }
+    .cardlist{ padding: 16px; }
+    .blog-button button, .mainbtn button{ width: 100%; }
+
+    /* reduce negative offsets on small screens to avoid overflow */
+    .item::before, .itemPro::before { left: -24px; }
+    .mainList::before { left: 4px; }
+}
