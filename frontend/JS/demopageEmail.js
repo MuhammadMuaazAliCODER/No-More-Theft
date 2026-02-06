@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitBtn = form?.querySelector('.submit-button');
 
     if (!form || !submitBtn) {
-        console.error(' Form or button not found');
+        console.error('Form or button not found');
         return;
     }
 
@@ -11,18 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const toast = document.createElement('div');
         toast.className = `toast ${type}`;
         toast.innerText = message;
-
         document.body.appendChild(toast);
-
-        setTimeout(() => {
-            toast.remove();
-        }, 3000);
+        setTimeout(() => toast.remove(), 4000);
     };
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-      
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
 
@@ -37,27 +32,45 @@ document.addEventListener('DOMContentLoaded', function () {
             description: document.getElementById('description').value
         };
 
-        fetch('http://localhost:5000/api/demo-request', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        })
-        .then(async res => {
-            if (!res.ok) throw new Error('Request failed');
-            return res.json();
-        })
-        .then(() => {
-            showToast('Demo request submitted successfully!', 'success');
-            form.reset();
-        })
-        .catch(err => {
-            console.error(err);
-            showToast('Something went wrong. Please try again.', 'error');
-        })
-        .finally(() => {
+        try {
+            const res = await fetch('http://localhost:5000/api/demo-request', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            let data;
+            const contentType = res.headers.get('content-type');
+
+           
+            if (contentType && contentType.includes('application/json')) {
+                data = await res.json();
+            } else {
+               
+                const text = await res.text();
+                data = { message: text };
+            }
+
+           
+            if (!res.ok) {
+                if (data.errors && data.errors.length > 0) {
+                    data.errors.forEach(err => showToast(err.msg, 'error'));
+                } else {
+                    showToast(data.message || 'Something went wrong', 'error');
+                }
+                return; 
+            }
+
             
+            showToast(data.message || 'Demo request submitted successfully!', 'success');
+            form.reset();
+
+        } catch (err) {
+            console.error('Fetch error:', err);
+            showToast('Something went wrong. Please try again.', 'error');
+        } finally {
             submitBtn.classList.remove('loading');
             submitBtn.disabled = false;
-        });
+        }
     });
 });
