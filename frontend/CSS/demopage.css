@@ -234,3 +234,15 @@
         transform: translateY(0);
     }
 }
+input::placeholder,
+textarea::placeholder {
+    color: rgba(71, 85, 105, 0.55);
+    opacity: 1;
+}
+.form-group select {
+    color: rgba(71, 85, 105, 0.55);
+}
+
+.form-group select:valid {
+    color: rgba(82, 93, 128, 1);
+}
