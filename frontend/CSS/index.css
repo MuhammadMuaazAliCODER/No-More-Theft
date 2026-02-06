@@ -328,17 +328,17 @@ color: rgba(71, 85, 105, 1);
 }
 .right-con{
    border-left: rgba(0, 168, 232, 1) 1px solid;
-   margin-bottom: 90px;
+ 
 
 }
-  .right-con  {
+  .right-con ul {
   background:
     linear-gradient(90deg, #00A8E8, #FFFFFF) top / 100% 1px no-repeat,
     linear-gradient(90deg, #00A8E8, #FFFFFF) bottom / 100% 1px no-repeat,
     white;
 }
-.left-con {
-    margin-bottom: 90px;
+.left-con ul {
+   
   background:
     linear-gradient(90deg, #FFFFFF ,  #00A8E8) top / 100% 1px no-repeat,
     linear-gradient(90deg, #FFFFFF, #00A8E8) bottom / 100% 1px no-repeat,
