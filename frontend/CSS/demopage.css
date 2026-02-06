@@ -63,7 +63,7 @@
 }
 
 .form-group label {
-    color: #374151;
+    color: rgba(44, 44, 44, 1);
     font-size: 13px;
     font-weight: 500;
     margin-bottom: 8px;
