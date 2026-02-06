@@ -104,44 +104,92 @@ class EmailService {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
     }
     .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f9f9f9;
+      max-width: 650px;
+      margin: 20px auto;
+      background-color: #ffffff;
     }
     .header {
       background-color: #4CAF50;
       color: white;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
-      border-radius: 5px 5px 0 0;
+      border-radius: 8px 8px 0 0;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .intro {
+      background-color: #fff3cd;
+      padding: 15px 20px;
+      border-left: 4px solid #ffc107;
+      margin: 0;
+    }
+    .intro p {
+      margin: 0;
+      color: #856404;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .intro .greeting {
+      font-weight: bold;
+      margin-bottom: 5px;
     }
     .content {
-      background-color: white;
-      padding: 30px;
-      border-radius: 0 0 5px 5px;
+      padding: 20px 30px;
+    }
+    .content > p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #666;
+      font-size: 14px;
     }
     .field {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .label {
-      font-weight: bold;
+      font-weight: 600;
       color: #555;
+      font-size: 14px;
+      margin-bottom: 8px;
     }
     .value {
-      margin-top: 5px;
-      padding: 10px;
-      background-color: #f5f5f5;
-      border-left: 3px solid #4CAF50;
+      padding: 12px 15px;
+      background-color: #f8f9fa;
+      border-left: 4px solid #4CAF50;
+      font-size: 14px;
+      color: #333;
+      word-wrap: break-word;
+    }
+    .value a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    .value a:hover {
+      text-decoration: underline;
+    }
+    .thank-you {
+      color: #000000;
+      font-weight: 600;
+      font-size: 16px;
+      margin: 25px 0 15px 0;
+      padding: 0 30px;
     }
     .footer {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      font-size: 12px;
-      color: #777;
+      padding: 15px 30px 25px 30px;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 10px;
+    }
+    .footer p {
+      margin: 5px 0;
+      font-size: 13px;
+      color: #666;
     }
   </style>
 </head>
@@ -150,6 +198,12 @@ class EmailService {
     <div class="header">
       <h2>🎯 New Demo Request</h2>
     </div>
+    
+    <div class="intro">
+      <p class="greeting">Hi Support Team,</p>
+      <p>A new demo request has been submitted. Please review the details below.</p>
+    </div>
+    
     <div class="content">
       <p>A new demo request has been submitted. Details below:</p>
       
@@ -175,7 +229,7 @@ class EmailService {
       
       <div class="field">
         <div class="label">Business Type:</div>
-        <div class="value">${data.businessType}</div>
+        <div class="value">${data.businessType || 'Not specified'}</div>
       </div>
       
       <div class="field">
@@ -194,11 +248,23 @@ class EmailService {
         <div class="value">${data.description}</div>
       </div>
       ` : ''}
-      
-      <div class="footer">
-        <p>Submitted on: ${new Date().toLocaleString()}</p>
-        <p>Please follow up with this request as soon as possible.</p>
-      </div>
+    </div>
+    
+    <div class="thank-you">
+      Thank You
+    </div>
+    
+    <div class="footer">
+      <p>Submitted on: ${new Date().toLocaleString('en-US', { 
+        month: 'numeric', 
+        day: 'numeric', 
+        year: 'numeric', 
+        hour: 'numeric', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: true 
+      })}</p>
+      <p>Please follow up with this request as soon as possible.</p>
     </div>
   </div>
 </body>
@@ -210,16 +276,32 @@ class EmailService {
     return `
 NEW DEMO REQUEST
 
+Hi Support Team,
+A new demo request has been submitted. Please review the details below.
+
+A new demo request has been submitted. Details below:
+
 Contact Person: ${data.name}
 Company Name: ${data.companyName}
 Email: ${data.email}
 Phone Number: ${data.phoneNumber}
-Business Type: ${data.businessType}
+Business Type: ${data.businessType || 'Not specified'}
 Number of Cameras: ${data.numCameras}
 Business Hours: ${data.businessHours}
 ${data.description ? `Additional Information: ${data.description}` : ''}
 
-Submitted on: ${new Date().toLocaleString()}
+Thank You
+
+Submitted on: ${new Date().toLocaleString('en-US', { 
+  month: 'numeric', 
+  day: 'numeric', 
+  year: 'numeric', 
+  hour: 'numeric', 
+  minute: '2-digit', 
+  second: '2-digit',
+  hour12: true 
+})}
+Please follow up with this request as soon as possible.
     `;
   }
 
@@ -282,7 +364,7 @@ Submitted on: ${new Date().toLocaleString()}
       <p><strong>Your Submission Details:</strong></p>
       <ul>
         <li>Company: ${data.companyName}</li>
-        <li>Business Type: ${data.businessType}</li>
+        <li>Business Type: ${data.businessType || 'Not specified'}</li>
         <li>Number of Cameras: ${data.numCameras}</li>
       </ul>
       
@@ -309,7 +391,7 @@ What's Next?
 
 Your Submission Details:
 - Company: ${data.companyName}
-- Business Type: ${data.businessType}
+- Business Type: ${data.businessType || 'Not specified'}
 - Number of Cameras: ${data.numCameras}
 
 If you have any questions or need immediate assistance, please don't hesitate to contact us.
