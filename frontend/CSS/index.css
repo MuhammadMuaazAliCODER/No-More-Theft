@@ -26,7 +26,7 @@ body {
 }
 .main{
     margin-top: 80px;
-    margin-bottom: 200px;
+    margin-bottom: 105px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,7 +114,7 @@ padding-left: clamp(24px, 8vw, 352px);
 padding-right: clamp(24px, 8vw, 352px);
 font-family: 'Plus Jakarta Sans';
 padding-top: 72px;
-padding-bottom: 72px;
+padding-bottom: 35px;
 display: flex;
 justify-content: center;
 }
