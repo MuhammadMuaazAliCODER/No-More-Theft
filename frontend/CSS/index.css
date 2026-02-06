@@ -395,27 +395,24 @@ letter-spacing: 0%;
 vertical-align: middle;
 color: rgba(71, 85, 105, 1);
 }
-.card{
-    background-color:white;
-    border-end-end-radius: 24px;
-    border-end-start-radius: 24px;
+.card {
+    background-color: white;
     width: 510px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
-
-box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
     border-radius: 24px;
+    overflow: hidden; 
 }
-.cardline{
+
+.cardline {
     width: 100%;
     height: 8px;
-   background: linear-gradient(90deg, #0D2F5F 0%, #00A8E8 100%);
-   border-top-left-radius: 24px;
-border-top-right-radius: 24px;
-margin-bottom: 32px;
+    background: linear-gradient(90deg, rgba(13, 47, 95, 1) 0%, rgba(0, 168, 232, 1) 100%);
+    margin: 0; 
 }
+
 .cardhead{
     display: flex;
     flex-direction: column;
