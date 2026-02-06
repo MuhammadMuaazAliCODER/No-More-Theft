@@ -318,6 +318,7 @@ color: rgba(71, 85, 105, 1);
 }
 .listtext{
     width: 83%;
+    color: rgba(71, 85, 105, 1);
 }
 .right-con{
    border-left: rgba(0, 168, 232, 1) 1px solid;
@@ -336,6 +337,9 @@ color: rgba(71, 85, 105, 1);
     linear-gradient(90deg, #FFFFFF ,  #00A8E8) top / 100% 1px no-repeat,
     linear-gradient(90deg, #FFFFFF, #00A8E8) bottom / 100% 1px no-repeat,
     white;
+}
+.right-con , .left-con{
+    color: rgba(71, 85, 105, 1);
 }
 #pricing{
  width: 100%;

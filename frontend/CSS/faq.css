@@ -35,13 +35,14 @@
     color: rgba(71, 85, 105, 1);
 }
 
-/* FLEXBOX LAYOUT - NOT GRID */
 .faq-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 50px;
+    align-items: flex-start; 
 }
+
 
 .faq-item {
     /* Each item takes up half the width minus gap */
