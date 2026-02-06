@@ -189,7 +189,8 @@ letter-spacing: 0%;
      content: "";
     position: absolute;
     left: 10px;
-    top: 26px;     
+    top: 44px;
+    z-index: 1;     
     bottom: 30px;    
     width: 2px;
     background: #00A8E8;
@@ -207,7 +208,7 @@ letter-spacing: 0%;
 background-color: #00A8E8;
 }
 .is-last::before{
-    height: 55%!important;
+    height: 16%!important;
 }
 .item, .itemPro {
     position: relative;
@@ -217,7 +218,7 @@ background-color: #00A8E8;
      content: "";
     position: absolute;
     left: -39px;
-    top: 15px;
+    top: 25px;
     width: 14px;
     height: 14px;
     background: rgba(0, 168, 232, 1);
@@ -230,12 +231,12 @@ box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
     content: "";
     position: absolute;
     left: -36px;
-    top: 16px;
+    top: 30px;
     width: 14px;
     height: 14px;
     background: rgba(229, 231, 235, 1);
     border-radius: 50%;
-   
+   z-index: 10;
 
 }
 .listhead{
