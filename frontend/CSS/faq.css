@@ -43,7 +43,6 @@
     align-items: flex-start; 
 }
 
-
 .faq-item {
     /* Each item takes up half the width minus gap */
     flex: 0 0 calc(50% - 10px);
