@@ -205,7 +205,7 @@ class EmailService {
     </div>
     
     <div class="content">
-      <p>A new demo request has been submitted. Details below:</p>
+     
       
       <div class="field">
         <div class="label">Contact Person:</div>
